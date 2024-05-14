@@ -10,9 +10,7 @@ $tablo = "kullanicilar";
 $baglanti = mysqli_connect("$host:$port", $kullaniciadi, $parola, $veritabani);
 
 if(!$baglanti){
-   echo "Bağlantı sağlandı";
+   echo "Bağlantı başarısız";
 }
-
-@mysqli_select_db($baglanti, $veritabani);
 
 ?>
