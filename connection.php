@@ -1,19 +1,17 @@
 <?php
 
-$host = "localhost:3307";
+$host = "localhost";
+$port = "3307";
 $kullaniciadi = "root";
 $parola = "";
 $veritabani = "kullanici";
 $tablo = "kullanicilar";
 
+$baglanti = mysqli_connect("$host:$port", $kullaniciadi, $parola, $veritabani);
 
-$baglanti = mysqli_connect($host, $kullaniciadi, $parola, $veritabani);
-
-if($baglanti){
-
+if(!$baglanti){
+   echo "Bağlantı sağlandı";
 }
-else
-   {echo "Bağlantı başarısız";}
 
 @mysqli_select_db($baglanti, $veritabani);
 
